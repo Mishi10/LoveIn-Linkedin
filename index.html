@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveIn - LinkedIn Dating Extension Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <div class="extension-demo">
+        <div class="header">
+            <div class="logo">💘 LoveIn 💘</div>
+            <div class="tagline">Transform LinkedIn into your professional dating paradise</div>
+        </div>
+
+        <div class="linkedin-mockup">
+            <div class="linkedin-header">
+                <div>🔗 LinkedIn</div>
+                <div>Professional Network → Love Network ❤️</div>
+            </div>
+            
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="compatibility-score">97% Match!</div>
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            👩‍💼
+                            <div class="online-indicator"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Rohan Singh</h3>
+                            <p>Senior Software Engineer at Google</p>
+                            <p>📍 Hyderabad • 28 years old</p>
+                        </div>
+                    </div>
+                    <div class="skills-interests">
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Coffee Lover</div>
+                        <div class="skill-tag">Hiking</div>
+                        <div class="skill-tag">TypeScript</div>
+                        <div class="skill-tag">Yoga</div>
+                    </div>
+                    <p style="color: #666; margin: 10px 0;">"Looking for someone who can debug my heart and compile our future together 💕"</p>
+                    <div class="action-buttons">
+                        <button class="btn btn-love" onclick="showMatch('Rohan')">💖 Super Like</button>
+                        <button class="btn btn-maybe" onclick="showInterest()">😊 Interested</button>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="compatibility-score">89% Match!</div>
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            👨‍💻
+                            <div class="online-indicator"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Anoop Jain</h3>
+                            <p>Product Manager at Meta</p>
+                            <p>📍 New Delhi • 31 years old</p>
+                        </div>
+                    </div>
+                    <div class="skills-interests">
+                        <div class="skill-tag">Product Strategy</div>
+                        <div class="skill-tag">Salsa Dancing</div>
+                        <div class="skill-tag">Photography</div>
+                        <div class="skill-tag">Cooking</div>
+                    </div>
+                    <p style="color: #666; margin: 10px 0;">"Seeking a co-founder for life's greatest startup - our relationship 🚀"</p>
+                    <div class="action-buttons">
+                        <button class="btn btn-love" onclick="showMatch('Aryan')">💖 Super Like</button>
+                        <button class="btn btn-maybe" onclick="showInterest()">😊 Interested</button>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="compatibility-score">94% Match!</div>
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            👩‍🎨
+                            <div class="online-indicator"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Ria Sharma</h3>
+                            <p>UX Designer at Airbnb</p>
+                            <p>📍 Hyderabad • 26 years old</p>
+                        </div>
+                    </div>
+                    <div class="skills-interests">
+                        <div class="skill-tag">Design Thinking</div>
+                        <div class="skill-tag">Rock Climbing</div>
+                        <div class="skill-tag">Figma</div>
+                        <div class="skill-tag">Travel</div>
+                        <div class="skill-tag">Wine Tasting</div>
+                    </div>
+                    <p style="color: #666; margin: 10px 0;">"Let's design the perfect user experience... for love ✨"</p>
+                    <div class="action-buttons">
+                        <button class="btn btn-love" onclick="showMatch('Ria')">💖 Super Like</button>
+                        <button class="btn btn-maybe" onclick="showInterest()">😊 Interested</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="extension-features">
+            <h2 style="text-align: center; color: white; font-size: 2rem; margin-bottom: 10px;">✨ Extension Features ✨</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💕</div>
+                    <h3>Love Algorithm</h3>
+                    <p>AI-powered compatibility matching based on skills, interests, and career goals</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>Flirt Mode</h3>
+                    <p>Transform professional messages into charming conversation starters</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Compatibility Score</h3>
+                    <p>Real-time compatibility percentage based on professional and personal interests</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Smart Filters</h3>
+                    <p>Filter by company, role, location, and relationship goals</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <button class="download-btn" onclick="downloadExtension()">
+                💘 Download LoveIn Extension 💘
+            </button>
+            <p style="color: white; margin-top: 15px; opacity: 0.8;">
+                Available for Chrome, Firefox, and Edge
+            </p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="hideMatch()"></div>
+    <div class="match-popup" id="matchPopup">
+        <h2>🎉 IT'S A MATCH! 🎉</h2>
+        <p style="font-size: 4rem; margin: 20px 0;">💕</p>
+        <p style="color: #666; margin-bottom: 20px;">You and <span id="matchName"></span> liked each other!</p>
+        <button class="btn btn-love" onclick="startChat()" style="margin-right: 10px;">💬 Start Chatting</button>
+        <button class="btn btn-maybe" onclick="hideMatch()">✨ Keep Browsing</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
