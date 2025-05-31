@@ -2,6 +2,9 @@
 
 This project is a creative web-based mockup that blends a professional networking layout with playful visual elements and animations. It demonstrates modern frontend design using HTML, CSS, and JavaScript, featuring responsive design, interactive UI components, and smooth visual effects.
 
+## View it live at 
+[LoveIn]( https://mishi10.github.io/LoveIn-Linkedin/)
+
 ## UI 
 ![image](https://github.com/user-attachments/assets/775bd93c-fb1c-4697-9343-9a56b723e783)
 
